@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fraud Detection - Cluster Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Transaction Cluster Predictor</h1>
+        <p class="subtitle">Enter transaction details to find its cluster</p>
+
+        <form action="/predict" method="POST">
+
+            <label for="type">Transaction Type</label>
+            <select name="type" id="type" required>
+                <option value="CASH_IN">CASH_IN</option>
+                <option value="CASH_OUT">CASH_OUT</option>
+                <option value="DEBIT">DEBIT</option>
+                <option value="PAYMENT">PAYMENT</option>
+                <option value="TRANSFER">TRANSFER</option>
+            </select>
+
+            <label for="acct_type">Account Type</label>
+            <select name="acct_type" id="acct_type" required>
+                <option value="Current">Current</option>
+                <option value="Savings">Savings</option>
+            </select>
+
+            <label for="time_of_day">Time of Day</label>
+            <select name="time_of_day" id="time_of_day" required>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Night">Night</option>
+            </select>
+
+            <label for="amount">Amount</label>
+            <input type="number" step="any" name="amount" id="amount" required>
+
+            <label for="oldbalanceOrg">Old Balance (Origin)</label>
+            <input type="number" step="any" name="oldbalanceOrg" id="oldbalanceOrg" required>
+
+            <label for="newbalanceOrig">New Balance (Origin)</label>
+            <input type="number" step="any" name="newbalanceOrig" id="newbalanceOrig" required>
+
+            <label for="oldbalanceDest">Old Balance (Destination)</label>
+            <input type="number" step="any" name="oldbalanceDest" id="oldbalanceDest" required>
+
+            <label for="newbalanceDest">New Balance (Destination)</label>
+            <input type="number" step="any" name="newbalanceDest" id="newbalanceDest" required>
+
+            <label for="unusuallogin">Unusual Login</label>
+            <input type="number" step="any" name="unusuallogin" id="unusuallogin" required>
+
+            <label for="step">Step</label>
+            <input type="number" step="any" name="step" id="step" required>
+
+            <button type="submit">Predict Cluster</button>
+        </form>
+    </div>
+</body>
+</html>
