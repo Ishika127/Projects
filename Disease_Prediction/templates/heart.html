@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+    <h2>❤️ Heart Disease Prediction</h2>
+
+    <form action="/predict_heart" method="POST">
+
+        <div class="field">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+
+        <div class="field">
+            <label for="sex">Sex (1 = Male, 0 = Female)</label>
+            <input type="number" id="sex" name="sex" required>
+        </div>
+
+        <div class="field">
+            <label for="chest_pain_type">Chest Pain Type</label>
+            <input type="number" id="chest_pain_type" name="chest_pain_type" required>
+        </div>
+
+        <div class="field">
+            <label for="resting_bps">Resting Blood Pressure</label>
+            <input type="number" id="resting_bps" name="resting_bps" required>
+        </div>
+
+        <div class="field">
+            <label for="cholesterol">Cholesterol</label>
+            <input type="number" id="cholesterol" name="cholesterol" required>
+        </div>
+
+        <div class="field">
+            <label for="fasting_blood_sugar">Fasting Blood Sugar</label>
+            <input type="number" id="fasting_blood_sugar" name="fasting_blood_sugar" required>
+        </div>
+
+        <div class="field">
+            <label for="resting_ecg">Resting ECG</label>
+            <input type="number" id="resting_ecg" name="resting_ecg" required>
+        </div>
+
+        <div class="field">
+            <label for="max_heart_rate">Max Heart Rate</label>
+            <input type="number" id="max_heart_rate" name="max_heart_rate" required>
+        </div>
+
+        <div class="field">
+            <label for="exercise_angina">Exercise Angina</label>
+            <input type="number" id="exercise_angina" name="exercise_angina" required>
+        </div>
+
+        <div class="field">
+            <label for="oldpeak">Oldpeak</label>
+            <input type="text" id="oldpeak" name="oldpeak" required>
+        </div>
+
+        <div class="field">
+            <label for="st_slope">ST Slope</label>
+            <input type="number" id="st_slope" name="st_slope" required>
+        </div>
+
+        <input type="submit" value="Predict">
+
+    </form>
+
+    <a href="/" class="back-link">
+        <button type="button">⬅ Back to Home</button>
+    </a>
+</div>
+
+</body>
+</html>

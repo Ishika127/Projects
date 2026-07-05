@@ -1,0 +1,79 @@
+/* Light Red Theme */
+
+body{
+    font-family: Arial, sans-serif;
+    background:#ffe5e5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    margin:0;
+}
+
+.card{
+    width:380px;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(255,0,0,.2);
+    text-align:center;
+}
+
+h1,h2{
+    color:#d32f2f;
+}
+
+p{
+    color:#666;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+label{
+    text-align:left;
+    color:#b71c1c;
+    font-weight:bold;
+}
+
+input{
+    padding:10px;
+    border:1px solid #f28b82;
+    border-radius:5px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#e53935;
+}
+
+button,input[type="submit"]{
+    background:#ef5350;
+    color:#fff;
+    border:none;
+    padding:10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover,
+input[type="submit"]:hover{
+    background:#e53935;
+}
+
+.result-box{
+    margin:15px 0;
+    padding:15px;
+    background:#ffebee;
+    border:1px solid #ef9a9a;
+    color:#c62828;
+    border-radius:5px;
+}
+
+a{
+    color:#d32f2f;
+    text-decoration:none;
+}

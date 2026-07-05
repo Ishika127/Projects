@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+    <h2>🍬 Diabetes Prediction</h2>
+
+    <form action="/predict_diabetes" method="POST">
+
+        <div class="field">
+            <label for="pregnancies">Pregnancies</label>
+            <input type="number" id="pregnancies" name="pregnancies" required>
+        </div>
+
+        <div class="field">
+            <label for="glucose">Glucose</label>
+            <input type="number" id="glucose" name="glucose" required>
+        </div>
+
+        <div class="field">
+            <label for="bloodpressure">Blood Pressure</label>
+            <input type="number" id="bloodpressure" name="bloodpressure" required>
+        </div>
+
+        <div class="field">
+            <label for="skinthickness">Skin Thickness</label>
+            <input type="number" id="skinthickness" name="skinthickness" required>
+        </div>
+
+        <div class="field">
+            <label for="insulin">Insulin</label>
+            <input type="number" id="insulin" name="insulin" required>
+        </div>
+
+        <div class="field">
+            <label for="bmi">BMI</label>
+            <input type="text" id="bmi" name="bmi" required>
+        </div>
+
+        <div class="field">
+            <label for="dpf">Diabetes Pedigree Function</label>
+            <input type="text" id="dpf" name="dpf" required>
+        </div>
+
+        <div class="field">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+
+        <input type="submit" value="Predict">
+
+    </form>
+
+    <a href="/" class="back-link">
+        <button type="button">⬅ Back to Home</button>
+    </a>
+</div>
+
+</body>
+</html>
